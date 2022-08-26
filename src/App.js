@@ -14,7 +14,14 @@ function App() {
   
     // TODO: Add the ability for the <RecipeCreate /> component to create new recipes.
   const createRecipe = (newRecipe) => {
-    setRecipes([...recipes, newRecipe]);
+      if (newRecipe.name.length === 0 || newRecipe.cuisine.length === 0
+          || newRecipe.photo.length === 0 || newRecipe.ingredients.length === 0
+          || newRecipe.preparation.length === 0) {
+          alert("Fields are empty")
+      } else {
+           setRecipes([...recipes, newRecipe]);
+      }
+
   }
   
 

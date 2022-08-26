@@ -25,7 +25,7 @@ function RecipeList({ recipes, deleteRecipe }) {
                     <tr key={index}>
                         <td>{recipe.name}</td>
                         <td>{recipe.cuisine}</td>
-                        <td><img src={recipe.photo}/></td>
+                        <td><img src={recipe.photo} width='100px'/></td>
                         <td>{recipe.ingredients}</td>
                         <td>{recipe.preparation}</td>
                         <td><button name="delete" onClick={()=>deleteRecipe(index)}>Delete</button></td>
